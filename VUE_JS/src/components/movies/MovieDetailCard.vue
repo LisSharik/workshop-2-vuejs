@@ -1,7 +1,5 @@
 <template>
     <div class="card w-100">
-        <!-- <img :src="movieDetails.Poster" :alt="'image ' + movieDetails.Title"> -->
-
         <div class="info w-80">
             <img  :src="props.storeMovieDetails.Poster" :alt="'image ' + props.storeMovieDetails.Title">
             
@@ -126,6 +124,27 @@ const props = defineProps<IProps>();
         }
 
    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card{
+        .info{
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0;
+            padding: 50px 10px;
+
+            .info-content{
+                width: 90% !important;
+                h1{
+                    text-align: center;
+                }
+             
+            }
+        }
+
+    }
 }
 
 </style>
